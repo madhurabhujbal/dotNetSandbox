@@ -17,16 +17,21 @@ namespace basicC_
             // Console.WriteLine(true);
             // Console.WriteLine(false);
 
-            string firstName;
-            firstName = "Bob";
-            Console.WriteLine(firstName);
-            firstName = "Rob";
-            Console.WriteLine(firstName);
-            firstName = "Tom";
-            Console.WriteLine(firstName);
+            // string firstName;
+            // firstName = "Bob";
+            // Console.WriteLine(firstName);
+            // firstName = "Rob";
+            // Console.WriteLine(firstName);
+            // firstName = "Tom";
+            // Console.WriteLine(firstName);
 
             var message = 123;
             Console.Write(message);
+
+            string name = "Bob";
+            int quantity = 3;
+            decimal temperature = 34.4m;
+            Console.WriteLine($"Hello, {name}! You have {quantity} in your inbox. The temperature is {temperature} celsius. ");
         }
     }
 }
