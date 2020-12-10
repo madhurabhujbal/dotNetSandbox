@@ -24,6 +24,9 @@ namespace basicC_
             Console.WriteLine(firstName);
             firstName = "Tom";
             Console.WriteLine(firstName);
+
+            var message = 123;
+            Console.Write(message);
         }
     }
 }
