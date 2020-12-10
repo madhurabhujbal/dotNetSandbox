@@ -11,11 +11,15 @@ namespace basicC_
             // Console.Write(" ");
             // Console.Write("You wrote your first lines of code");
 
-            Console.WriteLine('b');
-            Console.WriteLine(123);
-            Console.WriteLine(12.3);
-            Console.WriteLine(true);
-            Console.WriteLine(false);
+            // Console.WriteLine('b');
+            // Console.WriteLine(123);
+            // Console.WriteLine(12.3);
+            // Console.WriteLine(true);
+            // Console.WriteLine(false);
+
+            string firstName;
+            firstName = "Bob";
+            Console.WriteLine(firstName);
         }
     }
 }
