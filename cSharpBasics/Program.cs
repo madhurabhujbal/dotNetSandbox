@@ -20,6 +20,10 @@ namespace basicC_
             string firstName;
             firstName = "Bob";
             Console.WriteLine(firstName);
+            firstName = "Rob";
+            Console.WriteLine(firstName);
+            firstName = "Tom";
+            Console.WriteLine(firstName);
         }
     }
 }
