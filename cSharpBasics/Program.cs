@@ -11,6 +11,10 @@ namespace basicC_
             // Console.WriteLine("Hello \"World\"!");
             Console.WriteLine("c:\\source\\repos");
             Console.WriteLine(@"c:\source\repos");
+
+            string firstName = "Bob";
+            string greeting = "Hello";
+            Console.WriteLine(greeting + ", " + firstName + "!");
         }
     }
 }
