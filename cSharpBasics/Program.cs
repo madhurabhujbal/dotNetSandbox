@@ -15,6 +15,7 @@ namespace basicC_
             string firstName = "Bob";
             string greeting = "Hello";
             Console.WriteLine(greeting + ", " + firstName + "!");
+            Console.WriteLine($"{greeting}, {firstName}! ");
         }
     }
 }
