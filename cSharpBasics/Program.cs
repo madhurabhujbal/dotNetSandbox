@@ -6,16 +6,10 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("Hello\tWorld!");
-            // Console.WriteLine("Hello\nWorld!");
-            // Console.WriteLine("Hello \"World\"!");
-            Console.WriteLine("c:\\source\\repos");
-            Console.WriteLine(@"c:\source\repos");
-
             string firstName = "Bob";
-            string greeting = "Hello";
-            Console.WriteLine(greeting + ", " + firstName + "!");
-            Console.WriteLine($"{greeting}, {firstName}! ");
+            int widgetsSold = 7;
+            Console.WriteLine(firstName + " sold " + widgetsSold + 7 + " widgets.");
+            Console.WriteLine(firstName + " sold " + (widgetsSold + 7) + " widgets.");
         }
     }
 }
