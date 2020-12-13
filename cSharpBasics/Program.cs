@@ -29,6 +29,10 @@ namespace basicC_
             decimal decimalQt = 7 / 5;
             Console.WriteLine("Decimal quotient is: " + decimalQt);
 
+            //Division after casting the number type
+            decimal decimalQtCast = (decimal)7 / (decimal)5;
+            Console.WriteLine("Decimal quotient is: " + decimalQtCast);
+
         }
     }
 }
