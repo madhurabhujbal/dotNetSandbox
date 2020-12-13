@@ -33,6 +33,10 @@ namespace basicC_
             decimal decimalQtCast = (decimal)7 / (decimal)5;
             Console.WriteLine("Decimal quotient is: " + decimalQtCast);
 
+            //Calculating modulus
+            Console.WriteLine("Mod of number not completely divisible " + (200 % 3));
+            Console.WriteLine("Mod of number completely divisible " + (200 % 5));
+
         }
     }
 }
