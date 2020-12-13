@@ -20,6 +20,15 @@ namespace basicC_
             Console.WriteLine("Difference: " + difference);
             Console.WriteLine("Product: " + product);
             Console.WriteLine("Quotient: " + quotient);
+
+            //Will give the correct exact quotient
+            decimal decimalQuotient = 7 / 5m;
+            Console.WriteLine("Decimal quotient is: " + decimalQuotient);
+
+            //Will not give the decimal part of quotient after division
+            decimal decimalQt = 7 / 5;
+            Console.WriteLine("Decimal quotient is: " + decimalQt);
+
         }
     }
 }
