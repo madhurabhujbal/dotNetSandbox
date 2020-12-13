@@ -37,6 +37,14 @@ namespace basicC_
             Console.WriteLine("Mod of number not completely divisible " + (200 % 3));
             Console.WriteLine("Mod of number completely divisible " + (200 % 5));
 
+            //Order of operations - PEMDAS or BODMAS rule
+            int value1 = 3 + 4 * 5;
+            int value2 = 3 + 4 * 5 + 6 / 3;
+            int value3 = (3 + 4) * 5 + 6 / 3;
+            Console.WriteLine(value1);
+            Console.WriteLine(value2);
+            Console.WriteLine(value3);
+
         }
     }
 }
