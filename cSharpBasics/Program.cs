@@ -6,71 +6,13 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            string firstName = "Bob";
-            int widgetsSold = 7;
-            Console.WriteLine(firstName + " sold " + widgetsSold + 7 + " widgets.");
-            Console.WriteLine(firstName + " sold " + (widgetsSold + 7) + " widgets.");
-
-            int sum = 7 + 5;
-            int difference = 7 - 5;
-            int product = 7 * 5;
-            int quotient = 7 / 5;
-
-            Console.WriteLine("Sum: " + sum);
-            Console.WriteLine("Difference: " + difference);
-            Console.WriteLine("Product: " + product);
-            Console.WriteLine("Quotient: " + quotient);
-
-            //Will give the correct exact quotient
-            decimal decimalQuotient = 7 / 5m;
-            Console.WriteLine("Decimal quotient is: " + decimalQuotient);
-
-            //Will not give the decimal part of quotient after division
-            decimal decimalQt = 7 / 5;
-            Console.WriteLine("Decimal quotient is: " + decimalQt);
-
-            //Division after casting the number type
-            decimal decimalQtCast = (decimal)7 / (decimal)5;
-            Console.WriteLine("Decimal quotient is: " + decimalQtCast);
-
-            //Calculating modulus
-            Console.WriteLine("Mod of number not completely divisible " + (200 % 3));
-            Console.WriteLine("Mod of number completely divisible " + (200 % 5));
-
-            //Order of operations - PEMDAS or BODMAS rule
-            int value1 = 3 + 4 * 5;
-            int value2 = 3 + 4 * 5 + 6 / 3;
-            int value3 = (3 + 4) * 5 + 6 / 3;
-            Console.WriteLine(value1);
-            Console.WriteLine(value2);
-            Console.WriteLine(value3);
-
-            //Increment and decrement operators
-            int value = 1;
-            value = value + 1;
-            Console.WriteLine("First increment: " + value);
-
-            value += 1;
-            Console.WriteLine("Second increment: " + value);
-
-            value++;
-            Console.WriteLine("Third increment: " + value);
-
-            value = value - 1;
-            Console.WriteLine("First decrement: " + value);
-
-            value -= 1;
-            Console.WriteLine("Second decrement: " + value);
-
-            value--;
-            Console.WriteLine("Third decrement: " + value);
-
-            Console.WriteLine("Post increment: " + (value++));
-            Console.WriteLine("Pre increment: " + (++value));
-            Console.WriteLine("Pre decrement: " + (--value));
-            Console.WriteLine("Post decrement: " + (value--));
-
-
+            Random dice = new Random(); //stateful method
+            int roll1 = dice.Next();
+            int roll2 = dice.Next(101);
+            int roll3 = dice.Next(50, 101);
+            Console.WriteLine(roll1); //stateless method
+            Console.WriteLine(roll2);
+            Console.WriteLine(roll3);
         }
     }
 }
