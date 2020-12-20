@@ -6,44 +6,27 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            Random dice = new Random(); //stateful method
-            int roll1 = dice.Next(1, 7);
-            int roll2 = dice.Next(1, 7);
-            int roll3 = dice.Next(1, 7);
-
-            int total = roll1 + roll2 + roll3;
-            Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total} ");
-
-            if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+            //Initialisation of array
+            string[] stringArray = new string[3];
+            stringArray[0] = "ABC";
+            stringArray[1] = "FFD";
+            stringArray[2] = "ETD";
+            foreach (string s in stringArray)
             {
-                if ((roll1 == roll2) && (roll2 == roll3))
-                {
-                    Console.WriteLine("You rolled triples! +6 bonus to total!");
-                    total += 6;
-                }
-                else
-                {
-                    Console.WriteLine("You rolled doubles! +2 bonus to total!");
-                    total += 2;
-                }
+                Console.WriteLine(s);
             }
 
-            if (total >= 16)
+            //Initialise and add values in array at same time
+            int[] inverntory = { 200, 450, 700, 175, 250 };
+            int sum = 0;
+            int bin = 0;
+            foreach (int items in inverntory)
             {
-                Console.WriteLine("You win a new car!");
+                sum += items;
+                bin++;
+                Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum}) ");
             }
-            else if (total >= 10)
-            {
-                Console.WriteLine("You win a new laptop!");
-            }
-            else if (total == 7)
-            {
-                Console.WriteLine("You win a trip!");
-            }
-            else
-            {
-                Console.WriteLine("You win a kitten!");
-            }
+            Console.WriteLine($"We have {sum} items in inventory.");
         }
     }
 }
