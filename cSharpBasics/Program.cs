@@ -6,34 +6,13 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("a" == "a");
-            // Console.WriteLine("a" == "A");
-            // Console.WriteLine(1 == 2);
-
-            // string myValue = "a";
-            // Console.WriteLine(myValue == "a");
-
-            // Console.WriteLine("a" != "a");
-            // Console.WriteLine("a" != "A");
-            // Console.WriteLine(1 != 2);
-            // string myValue = "a";
-            // Console.WriteLine(myValue != "a");
-
-            // Console.WriteLine(1 > 2);
-            // Console.WriteLine(1 < 2);
-            // Console.WriteLine(1 >= 1);
-            // Console.WriteLine(1 <= 1);
-
-            string pangram = "The quick brown fox jumps over the lazy dog.";
-            Console.WriteLine(pangram.Contains("fox"));
-            Console.WriteLine(pangram.Contains("cow"));
-
-            Console.WriteLine(!pangram.Contains("fox"));
-            Console.WriteLine(!pangram.Contains("cow"));
-
             int saleAmount = 1001;
             int discount = saleAmount > 1000 ? 100 : 50;
             Console.WriteLine($"Discount: {discount}");
+
+            Random coin = new Random();
+            int flipResult = coin.Next(0, 2);
+            Console.WriteLine((flipResult == 0) ? "heads" : "tails");
         }
     }
 }
