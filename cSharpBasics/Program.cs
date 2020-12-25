@@ -6,15 +6,16 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            bool flag = true;
-            int value = 0;
+            string value = "Microsoft Learn";
+            string reversedValue = Reverse(value);
+            Console.WriteLine($"Secret message: {reversedValue}");
+        }
 
-            if (flag)
-            {
-                value = 10;
-                Console.WriteLine($"Inside of code block: {value}");
-            }
-            Console.WriteLine($"Outside of code block: {value}");
+        static string Reverse(string message)
+        {
+            char[] letters = message.ToCharArray();
+            Array.Reverse(letters);
+            return new string(letters);
         }
     }
 }
