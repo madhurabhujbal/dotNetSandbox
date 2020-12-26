@@ -1,4 +1,5 @@
 ﻿using System;
+using myUtilities;
 
 namespace basicC_
 {
@@ -7,7 +8,7 @@ namespace basicC_
         static void Main(string[] args)
         {
             string value = "Microsoft Learn";
-            string reversedValue = myUtilities.Utility.Reverse(value);
+            string reversedValue = Utility.Reverse(value);
             Console.WriteLine($"Secret message: {reversedValue}");
         }
     }
