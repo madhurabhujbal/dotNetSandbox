@@ -1,4 +1,5 @@
 ﻿using System;
+using myUtilities;
 
 namespace basicC_
 {
@@ -6,13 +7,23 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            int saleAmount = 1001;
-            int discount = saleAmount > 1000 ? 100 : 50;
-            Console.WriteLine($"Discount: {discount}");
-
-            Random coin = new Random();
-            int flipResult = coin.Next(0, 2);
-            Console.WriteLine((flipResult == 0) ? "heads" : "tails");
+            string value = "Microsoft Learn";
+            string reversedValue = Utility.Reverse(value);
+            Console.WriteLine($"Secret message: {reversedValue}");
         }
     }
 }
+
+namespace myUtilities
+{
+    class Utility
+    {
+        public static string Reverse(string message)
+        {
+            char[] letters = message.ToCharArray();
+            Array.Reverse(letters);
+            return new string(letters);
+        }
+    }
+}
+
