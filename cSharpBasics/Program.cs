@@ -6,16 +6,13 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            //int employeeLevel = 200;
-            int employeeLevel = 205;
+            int employeeLevel = 100;
             string employeeName = "John Smith";
 
             string title = "";
             switch (employeeLevel)
             {
                 case 100:
-                    title = "Junior Associate";
-                    break;
                 case 200:
                     title = "Senior Associate";
                     break;
