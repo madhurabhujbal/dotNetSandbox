@@ -6,7 +6,8 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            int employeeLevel = 200;
+            //int employeeLevel = 200;
+            int employeeLevel = 205;
             string employeeName = "John Smith";
 
             string title = "";
