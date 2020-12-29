@@ -1,5 +1,4 @@
 ﻿using System;
-using myUtilities;
 
 namespace basicC_
 {
@@ -7,22 +6,27 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            string value = "Microsoft Learn";
-            string reversedValue = Utility.Reverse(value);
-            Console.WriteLine($"Secret message: {reversedValue}");
-        }
-    }
-}
+            int employeeLevel = 100;
+            string employeeName = "John Smith";
 
-namespace myUtilities
-{
-    class Utility
-    {
-        public static string Reverse(string message)
-        {
-            char[] letters = message.ToCharArray();
-            Array.Reverse(letters);
-            return new string(letters);
+            string title = "";
+            switch (employeeLevel)
+            {
+                case 100:
+                case 200:
+                    title = "Senior Associate";
+                    break;
+                case 300:
+                    title = "Manager";
+                    break;
+                case 400:
+                    title = "Senoir Manager";
+                    break;
+                default:
+                    title = "Associate";
+                    break;
+            }
+            Console.WriteLine($"{employeeName}, {title}");
         }
     }
 }
