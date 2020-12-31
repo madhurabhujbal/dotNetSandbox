@@ -6,27 +6,15 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            int employeeLevel = 100;
-            string employeeName = "John Smith";
-
-            string title = "";
-            switch (employeeLevel)
+            string[] names = { "Alex", "Eddie", "David", "Michael" };
+            for (int i = 0; i < names.Length; i++)
             {
-                case 100:
-                case 200:
-                    title = "Senior Associate";
-                    break;
-                case 300:
-                    title = "Manager";
-                    break;
-                case 400:
-                    title = "Senoir Manager";
-                    break;
-                default:
-                    title = "Associate";
-                    break;
+                if (names[i] == "David")
+                {
+                    names[i] = "Sammy";
+                }
             }
-            Console.WriteLine($"{employeeName}, {title}");
+            foreach (var name in names) Console.WriteLine(name);
         }
     }
 }
