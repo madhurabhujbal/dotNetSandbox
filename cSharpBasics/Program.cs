@@ -9,12 +9,14 @@ namespace basicC_
             Random random = new Random();
             int current = random.Next(1, 11);
 
-            while (current >= 3)
+            do
             {
-                Console.WriteLine(current);
                 current = random.Next(1, 11);
-            }
-            Console.WriteLine($"Last number: {current} ");
+
+                if (current >= 8) continue;
+
+                Console.WriteLine(current);
+            } while (current != 7);
         }
     }
 }
