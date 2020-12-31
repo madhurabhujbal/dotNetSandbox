@@ -7,13 +7,14 @@ namespace basicC_
         static void Main(string[] args)
         {
             Random random = new Random();
-            int current = 0;
+            int current = random.Next(1, 11);
 
-            do
+            while (current >= 3)
             {
-                current = random.Next(1, 11);
                 Console.WriteLine(current);
-            } while (current != 7);
+                current = random.Next(1, 11);
+            }
+            Console.WriteLine($"Last number: {current} ");
         }
     }
 }
