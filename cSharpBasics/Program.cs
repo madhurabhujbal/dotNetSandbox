@@ -6,15 +6,17 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
-            string[] names = { "Alex", "Eddie", "David", "Michael" };
-            for (int i = 0; i < names.Length; i++)
+            Random random = new Random();
+            int current = random.Next(1, 11);
+
+            do
             {
-                if (names[i] == "David")
-                {
-                    names[i] = "Sammy";
-                }
-            }
-            foreach (var name in names) Console.WriteLine(name);
+                current = random.Next(1, 11);
+
+                if (current >= 8) continue;
+
+                Console.WriteLine(current);
+            } while (current != 7);
         }
     }
 }
