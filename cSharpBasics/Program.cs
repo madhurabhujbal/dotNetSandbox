@@ -6,17 +6,32 @@ namespace basicC_
     {
         static void Main(string[] args)
         {
+            int heroPoints = 10, monstorPoints = 10;
             Random random = new Random();
-            int current = random.Next(1, 11);
 
             do
             {
-                current = random.Next(1, 11);
+                int attackOnMonstor = random.Next(1, 11);
+                Console.WriteLine($"Monstor points lost in attack: {attackOnMonstor}");
+                monstorPoints -= attackOnMonstor;
+                Console.WriteLine($"Monstor points remaining after attack: {monstorPoints}");
+                if (monstorPoints <= 0)
+                {
+                    Console.WriteLine("Hero is the winner");
+                    break;
+                };
 
-                if (current >= 8) continue;
+                int attackOnHero = random.Next(1, 11);
+                Console.WriteLine($"Hero points lost in attack: {attackOnHero}");
+                heroPoints -= attackOnHero;
+                Console.WriteLine($"Hero points remaining after attack: {heroPoints}");
+                if (heroPoints <= 0)
+                {
+                    Console.WriteLine("Monstor is the winner");
+                    break;
+                };
 
-                Console.WriteLine(current);
-            } while (current != 7);
+            } while (heroPoints > 0 && monstorPoints > 0);
         }
     }
 }
