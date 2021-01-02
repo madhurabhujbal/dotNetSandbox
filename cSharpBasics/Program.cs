@@ -9,7 +9,7 @@ namespace basicC_
             int heroPoints = 10, monstorPoints = 10;
             Random random = new Random();
 
-            do
+            while (heroPoints > 0 && monstorPoints > 0)
             {
                 int attackOnMonstor = random.Next(1, 11);
                 monstorPoints -= attackOnMonstor;
@@ -29,7 +29,7 @@ namespace basicC_
                     break;
                 };
 
-            } while (heroPoints > 0 && monstorPoints > 0);
+            }
         }
     }
 }
