@@ -12,22 +12,20 @@ namespace basicC_
             do
             {
                 int attackOnMonstor = random.Next(1, 11);
-                Console.WriteLine($"Monstor points lost in attack: {attackOnMonstor}");
                 monstorPoints -= attackOnMonstor;
-                Console.WriteLine($"Monstor points remaining after attack: {monstorPoints}");
+                Console.WriteLine($"Monstor was damaged and lost {attackOnMonstor} health and now has: {monstorPoints} health");
                 if (monstorPoints <= 0)
                 {
-                    Console.WriteLine("Hero is the winner");
+                    Console.WriteLine("Hero wins!!!");
                     break;
                 };
 
                 int attackOnHero = random.Next(1, 11);
-                Console.WriteLine($"Hero points lost in attack: {attackOnHero}");
                 heroPoints -= attackOnHero;
-                Console.WriteLine($"Hero points remaining after attack: {heroPoints}");
+                Console.WriteLine($"Hero was damaged and lost {attackOnHero} health and now has: {heroPoints} health");
                 if (heroPoints <= 0)
                 {
-                    Console.WriteLine("Monstor is the winner");
+                    Console.WriteLine("Monstor wins!!!");
                     break;
                 };
 
