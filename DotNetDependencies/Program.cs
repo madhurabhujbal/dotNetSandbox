@@ -16,6 +16,10 @@ namespace DotNetDependencies
             Console.WriteLine(DateTime.UtcNow.AddHours(-2).Humanize());
             Console.WriteLine(TimeSpan.FromDays(1).Humanize());
             Console.WriteLine(TimeSpan.FromDays(16).Humanize());
+
+            Console.WriteLine("IAmLearningToCode".Humanize(LetterCasing.AllCaps));
+            Console.WriteLine("IAmLearningToCode".Humanize(LetterCasing.LowerCase));
+            // Console.WriteLine("HUMANIZER".Transform(To.Lowercase, To.TitleCase));
         }
 
         static void Main(string[] args)
