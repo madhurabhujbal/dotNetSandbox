@@ -5,6 +5,11 @@ namespace DotNetDependencies
 {
     class Program
     {
+        int[] array1 = new int[] {7, 3, 47};
+        int[] array2 = new int[] {40, 4, 50};
+        int[] array3 = new int[] {55, 2, 20};
+        int[] array4 = new int[] {38, 6, 12};
+
         static void HumanizeQuantities() {
             Console.WriteLine("case".ToQuantity(0));
             Console.WriteLine("case".ToQuantity(1));
