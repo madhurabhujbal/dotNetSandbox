@@ -6,6 +6,8 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
+            string inputText = System.IO.File.ReadAllText(@"C:\C#\CodingPractice\Input.txt");
+            Console.WriteLine(inputText);
 
             string[] numberArray = System.IO.File.ReadAllLines(@"C:\C#\CodingPractice\Input.txt");
             Console.WriteLine("Numbers in input text file: ");
