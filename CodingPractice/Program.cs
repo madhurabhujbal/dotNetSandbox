@@ -4,13 +4,30 @@ namespace CodingPractice
 {
     class Program
     {
+
+        private static bool isConditionA(int numValue)
+        {
+            if ((numValue >= 1 && numValue <= 3) || (numValue >= 5 && numValue <= 7))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private static bool isConditionB(int numValue)
+        {
+            if ((numValue >= 6 && numValue <= 11) || (numValue >= 33 && numValue <= 44))
+            {
+                return true;
+            }
+            return false;
+        }
+
         static void Main(string[] args)
         {
-            // string inputText = System.IO.File.ReadAllText(@"C:\C#\CodingPractice\Input.txt");
-            // Console.WriteLine(inputText);
 
             string[] numberArray = System.IO.File.ReadAllLines(@"C:\C#\CodingPractice\Input.txt");
-            // int totalCount = 0;
+            //Initialise counts
             int countA = 0;
             int countB = 0;
             int countAB = 0;
@@ -26,14 +43,8 @@ namespace CodingPractice
                 foreach (string element in elements)
                 {
                     int numValue = int.Parse(element);
-                    if ((numValue >= 1 && numValue <= 3) || (numValue >= 5 && numValue <= 7))
-                    {
-                        conditionA = true;
-                    }
-                    if ((numValue >= 6 && numValue <= 11) || (numValue >= 33 && numValue <= 44))
-                    {
-                        conditionB = true;
-                    }
+                    conditionA = conditionA || isConditionA(numValue);
+                    conditionB = conditionB || isConditionB(numValue);
                 }
 
                 // Update count based on a condition
