@@ -11,12 +11,14 @@ namespace CodingPractice
 
             string[] numberArray = System.IO.File.ReadAllLines(@"C:\C#\CodingPractice\Input.txt");
             string firstLine = numberArray[0];
-            Console.WriteLine(firstLine);
             string[] newArray = firstLine.Split(',');
-            foreach (var element in newArray)
+            foreach (string element in newArray)
             {
-                Console.Write($"{element} ");
+                //Console.Write($"{element} ");
+                int num = int.Parse(element);
+
             }
+
 
             // for (int i = 0; i < numberArray.Length; i++)
             // {
