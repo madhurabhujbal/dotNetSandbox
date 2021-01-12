@@ -6,15 +6,22 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
-            string inputText = System.IO.File.ReadAllText(@"C:\C#\CodingPractice\Input.txt");
-            Console.WriteLine(inputText);
+            // string inputText = System.IO.File.ReadAllText(@"C:\C#\CodingPractice\Input.txt");
+            // Console.WriteLine(inputText);
 
             string[] numberArray = System.IO.File.ReadAllLines(@"C:\C#\CodingPractice\Input.txt");
-            Console.WriteLine("Numbers in input text file: ");
-            foreach (string numberline in numberArray)
+            string firstLine = numberArray[0];
+            Console.WriteLine(firstLine);
+            string[] newArray = firstLine.Split(',');
+            foreach (var element in newArray)
             {
-                Console.WriteLine("\t" + numberline);
+                Console.Write($"{element} ");
             }
+
+            // for (int i = 0; i < numberArray.Length; i++)
+            // {
+            //     Console.WriteLine(numberArray[i]);
+            // }
         }
     }
 }
