@@ -16,7 +16,14 @@ namespace CodingPractice
             {
                 //Console.Write($"{element} ");
                 int num = int.Parse(element);
-
+                if (num >= 1 && num <= 3)
+                {
+                    Console.WriteLine($"Condition matched: {num}");
+                }
+                else
+                {
+                    Console.WriteLine($"Condition not matched: {num}");
+                }
             }
 
 
