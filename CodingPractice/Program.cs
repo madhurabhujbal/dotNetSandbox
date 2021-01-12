@@ -11,45 +11,52 @@ namespace CodingPractice
 
             string[] numberArray = System.IO.File.ReadAllLines(@"C:\C#\CodingPractice\Input.txt");
             // int totalCount = 0;
-            int conditionA = 0;
-            int conditionB = 0;
-            int conditionAB = 0;
+            int countA = 0;
+            int countB = 0;
+            int countAB = 0;
             int None = 0;
-            string firstLine = numberArray[0];
-            string[] newArray = firstLine.Split(',');
-            foreach (string element in newArray)
+
+            foreach (string currLine in numberArray)
             {
-                //Console.Write($"{element} ");
-                int num = int.Parse(element);
-                if (((num >= 1 && num <= 3) || (num >= 5 && num <= 7)) && ((num >= 6 && num <= 11) || (num >= 33 && num <= 44)))
+                bool conditionA = false;
+                bool conditionB = false;
+
+                // Check for conditions
+                string[] elements = currLine.Split(',');
+                foreach (string element in elements)
                 {
-                    Console.WriteLine($"Condition A & B matched: {num}");
-                    conditionA += 1;
+                    int numValue = int.Parse(element);
+                    if ((numValue >= 1 && numValue <= 3) || (numValue >= 5 && numValue <= 7))
+                    {
+                        conditionA = true;
+                    }
+                    if ((numValue >= 6 && numValue <= 11) || (numValue >= 33 && numValue <= 44))
+                    {
+                        conditionB = true;
+                    }
                 }
-                else if ((num >= 1 && num <= 3) || (num >= 5 && num <= 7))
+
+                // Update count based on a condition
+                if (conditionA && conditionB)
                 {
-                    Console.WriteLine($"Condition A matched: {num}");
-                    conditionB += 1;
+                    countAB++;
                 }
-                else if ((num >= 6 && num <= 11) || (num >= 33 && num <= 44))
+                else if (conditionA)
                 {
-                    Console.WriteLine($"Condition B matched: {num}");
-                    conditionAB += 1;
+                    countA++;
+                }
+                else if (conditionB)
+                {
+                    countB++;
                 }
                 else
                 {
-                    Console.WriteLine($"Condition not matched: {num}");
-                    None += 1;
+                    None++;
                 }
-
-                Console.WriteLine($" Only condition A: {conditionA} \n Only condition B: {conditionB} \n Both condition A & B: {conditionAB} \n None: {None}");
             }
 
+            Console.WriteLine($" Only condition A: {countA} \n Only condition B: {countB} \n Both condition A & B: {countAB} \n None: {None}");
 
-            // for (int i = 0; i < numberArray.Length; i++)
-            // {
-            //     Console.WriteLine(numberArray[i]);
-            // }
         }
     }
 }
